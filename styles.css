@@ -1,0 +1,99 @@
+body{
+    background-color: white;
+}
+
+/*Top section*/
+.bg-picture{
+    background: url('images/topSection/bgInsurance5.jpg') no-repeat bottom;
+    background-size: cover;
+}
+/*Navbar styles*/
+.toggler-button{
+    color: black;
+    border-color: black;
+    border-width: 3px;
+}
+.bg-grey{
+    background: #0AA1DD;
+    box-shadow: 0px 10px 8px gray;
+}
+.logo-editor{
+    height: 130px;
+    width: 130px;
+    padding: 0px;
+    margin-right: 0px;
+}
+.my-navbar{
+    padding-left: 5%;
+    padding-right: 5%;
+    font-weight: bold;
+    width: 100%;
+}
+.barva-textu-navbar{
+    color: black;
+}
+.navbar-underline{
+    border-bottom: 2px solid transparent;
+}
+.navbar-underline:hover{
+    border-bottom: 2px solid black;
+}
+.dropdown-menu{
+    background-color: #F1EEE9;
+}
+.navbar-brand{
+    text-shadow: 10px 10px 8px black;
+}
+.navbar-text{
+    font-weight: bold;
+}
+/* Footer */
+
+#footer-author-name{
+    font-weight: bold;
+}
+
+/*Carousel*/
+.carousel-control-prev-icon{
+    background-image: url("images/carusel/left-arrow.svg");
+}
+.carousel-control-next-icon{
+    background-image:url("images/carusel/right-arrow.svg");
+}
+.carousel-mine{
+    width: 800px;
+    text-shadow: 10px 10px 8px black;
+    box-shadow: 10px 10px 8px gray
+}
+.text-carousel{
+    color: black;
+    text-decoration: none;  
+}
+
+.carousel-section{
+    display: flex;
+    align-items: flex-center;
+    justify-content: center;
+    
+}
+/*Index informations section*/
+.img-services-mainpage{
+    height: 250px;
+}
+.img-insurance-icons{
+    height: 100px;
+}
+
+/*Obsah stránky-editace entit */
+#pojistenci-odkazy{
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+}
+#pojistenci-odkazy:hover {
+    font-weight: bolder;
+    text-decoration: underline;
+    color: blue;
+}
+
+

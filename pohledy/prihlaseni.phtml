@@ -1,0 +1,25 @@
+<section class="container my-5 py-5 col-6">
+        <form method="POST">
+            <div class="form-group row my-2 py-2">
+                <div class="col-3">
+                    <label class="col-form-label">Přihlašovací jméno</label>
+                </div>
+                <div class="col-5 col-md-9">
+                    <input type="text" name="prihlasovaci_jmeno" class="form-control col-form-label" placeholder="Zadej" required = "required" value="<?php if (isset($_POST['prihlasovaci_jmeno'])) echo(htmlspecialchars($_POST['prihlasovaci_jmeno'])); ?>">
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-3">
+                    <label class="col-form-label">Heslo</label>
+                </div>
+                <div class="col-5 col-md-9">
+                    <input type="password" name="heslo" class="form-control col-form-label" placeholder="Zadej" required = "required" value="<?php if (isset($_POST['heslo'])) echo(htmlspecialchars($_POST['heslo'])); ?>">
+                </div>
+            </div>
+            <div class="form-row text-center">
+                <div class="col my-5">
+                    <button type="submit" class="btn btn-dark">Přihlásit</button>
+                </div>
+            </div>
+        </form>
+    </section>

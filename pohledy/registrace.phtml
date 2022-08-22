@@ -1,0 +1,33 @@
+<section class="container my-5 py-5 col-6">
+        <form method="POST">
+            <div class="form-group row my-3">
+                <div class="col-3">
+                    <label class="col-form-label">Přihlašovací jméno</label>
+                </div>
+                <div class="col-5 col-md-9">
+                    <input type="text" name="prihlasovaci_jmeno" class="form-control col-form-label" placeholder="Jan" required = "required" value="<?php if (isset($_POST['prihlasovaci_jmeno'])) echo(htmlspecialchars($_POST['prihlasovaci_jmeno'])); ?>">
+                </div>
+            </div>
+            <div class="form-group row my-3">
+                <div class="col-3">
+                    <label class="col-form-label">Heslo</label>
+                </div>
+                <div class="col-5 col-md-9">
+                    <input type="password" name="heslo" class="form-control col-form-label" placeholder="8-20 znaků" required = "required" value="<?php if (isset($_POST['heslo'])) echo(htmlspecialchars($_POST['heslo'])); ?>">
+                </div>
+            </div>
+            <div class="form-group row my-3">
+                <div class="col-3">
+                    <label class="col-form-label">Heslo znovu</label>
+                </div>
+                <div class="col-5 col-md-9">
+                    <input type="password" name="heslo_znovu" class="form-control col-form-label" placeholder="8-20 znaků" required = "required" value="<?php if (isset($_POST['heslo_znovu'])) echo(htmlspecialchars($_POST['heslo_znovu'])); ?>">
+                </div>
+            </div>
+            <div class="form-row text-center">
+                <div class="col my-2">
+                    <button type="submit" class="btn btn-dark">Registrovat</button>
+                </div>
+            </div>
+        </form>
+    </section>

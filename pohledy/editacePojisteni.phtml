@@ -1,0 +1,35 @@
+<section class="container my-5 py-5 col-12">
+        <div class="row">
+            <div class="col-12">
+                <h2>Editovat: <?=$pojisteniInfo[0][2]?> u pojištěnce: <?=$pojistenecInfo[0][0]?> <?=$pojistenecInfo[0][1]?></h2>
+            </div>
+        </div>
+        <form method="POST">
+            <div class="form-group row my-3">
+                <div class="col-12 col-md-6">
+                    <label class="col-form-label">Částka</label>
+                    <input type="text" name="castka" class="form-control col-form-label" value="<?=$pojisteniInfo[0][3]?>">
+                </div>
+                <div class="col-12 col-md-6">
+                    <label class="col-form-label">Předmět pojištění</label>
+                    <input type="text" name="predmet" class="form-control col-form-label" value="<?=$pojisteniInfo[0][4]?>">
+                </div>
+            </div>
+            <div class="form-group row my-3">
+                <div class="col-12 col-md-6">
+                    <label class="col-form-label">Platnost od</label>
+                    <input type="date" name="platnost_od" class="form-control col-form-label" value="<?=$pojisteniInfo[0][5]?>">
+                </div>
+                <div class="col-12 col-md-6">
+                    <label class="col-form-label">Platnost do</label>
+                    <input type="date" name="platnost_do" class="form-control col-form-label" value="<?=$pojisteniInfo[0][6]?>">
+                </div>
+            </div>
+            
+            <div class="form-row text-center">
+                <div class="col my-2 py-5">
+                    <button type="submit" class="btn btn-dark">Uložit</button>
+                </div>
+            </div>
+        </form>
+    </section>

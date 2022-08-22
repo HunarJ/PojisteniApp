@@ -1,0 +1,47 @@
+<section class="container my-5 py-5 col-12">
+        <div class="row">
+            <div class="col-12">
+                <h2>Přidat pojištění k <?=$pojistenec[0]['jmeno']?> <?=$pojistenec[0]['prijmeni']?></h2>
+            </div>
+        </div>
+        <form method="POST">
+        <div class="form-group row my-3">
+                <input type="hidden" name="pojistenec_id" value="<?=$pojistenec[0][0]?>">
+                <div class="col-12">
+                    <label class="col-form-label" for="inlineFormCustomSelect">Pojištění</label>
+                    <select class="form-control custom-select mr-2" name="pojisteni" id="ukazka-velikost" required = "required" value="<?php if (isset($_POST['pojisteni'])) echo(htmlspecialchars($_POST['pojisteni'])); ?>">
+                        
+                        <?php foreach ($druhyPojisteni as $druhPojisteni) : ?>
+                            <option value="<?=$druhPojisteni?>"><?=$druhPojisteni?></option>
+                        <?php endforeach ?>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group row my-3">
+                <div class="col-12 col-md-6">
+                    <label class="col-form-label">Částka</label>
+                    <input type="text" name="castka" class="form-control col-form-label" placeholder="10000000" required = "required" value="<?php if (isset($_POST['castka'])) echo(htmlspecialchars($_POST['castka'])); ?>">
+                </div>
+                <div class="col-12 col-md-6">
+                    <label class="col-form-label">Předmět pojištění</label>
+                    <input type="text" name="predmet" class="form-control col-form-label" placeholder="Byt" required = "required" value="<?php if (isset($_POST['predmet'])) echo(htmlspecialchars($_POST['predmet'])); ?>">
+                </div>
+            </div>
+            <div class="form-group row my-3">
+                <div class="col-12 col-md-6">
+                    <label class="col-form-label">Platnost od</label>
+                    <input type="date" name="platnost_od" class="form-control col-form-label" value="<?=$date = date('Y-m-d')?>" required = "required" value="<?php if (isset($_POST['platnost_od'])) echo(htmlspecialchars($_POST['platnost_od'])); ?>">
+                </div>
+                <div class="col-12 col-md-6">
+                    <label class="col-form-label">Platnost do</label>
+                    <input type="date" name="platnost_do" class="form-control col-form-label" value="<?=$date = date('Y-m-d')?>" required = "required" value="<?php if (isset($_POST['platnost_do'])) echo(htmlspecialchars($_POST['platnost_do'])); ?>">
+                </div>
+            </div>
+            
+            <div class="form-row text-center">
+                <div class="col my-2 py-5">
+                    <button type="submit" class="btn btn-dark">Uložit</button>
+                </div>
+            </div>
+        </form>
+    </section>

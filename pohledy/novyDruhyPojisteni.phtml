@@ -1,0 +1,14 @@
+<section class="container my-5 py-5 col-6">
+        <h1>Přidání nového druhu pojištění</h1>
+        <form method="post">
+            <div class="form-group row my-3">
+                <div class="col-12 col-md-6">
+                    <label class="col-form-label">Přidej druh pojištění</label>
+                    <input type="text" name="pojisteni_druh" class="form-control col-form-label" placeholder="Zadej druh pojištění" required = "required" value="<?php if (isset($_POST['pojisteni_druh'])) echo(htmlspecialchars($_POST['pojisteni_druh'])); ?>">
+            <div class="form-row text-center">
+                <div class="col my-2">
+                    <button type="submit" class="btn btn-dark">Uložit</button>
+                </div>
+            </div>
+        </form>
+    </section>

@@ -1,0 +1,46 @@
+<section class="container my-5 py-5 col-6">
+        <h1>Editace pojištěnce <?=$pojistenecInfo[0][1]?> <?=$pojistenecInfo[0][2]?></h1>
+        <form method="post">
+            <div class="form-group row my-3">
+                <div class="col-12 col-md-6">
+                    <label class="col-form-label">Jméno</label>
+                    <input type="text" name="jmeno" class="form-control col-form-label" value="<?=$pojistenecInfo[0][1]?>">
+                </div>
+                <div class="col-12 col-md-6">
+                    <label class="col-form-label">Příjmení</label>
+                    <input type="text" name="prijmeni" class="form-control col-form-label" value="<?=$pojistenecInfo[0][2]?>">
+                </div>
+            </div>
+            <div class="form-group row my-3">
+                <div class="col-12 col-md-6">
+                    <label class="col-form-label">Email</label>
+                    <input type="text" name="email" class="form-control col-form-label" value="<?=$pojistenecInfo[0][3]?>">
+                </div>
+                <div class="col-12 col-md-6">
+                    <label class="col-form-label">Telefon</label>
+                    <input type="text" name="telefon" class="form-control col-form-label" value="<?=$pojistenecInfo[0][4]?>">
+                </div>
+            </div>
+            <div class="form-group row my-3">
+                <div class="col-12 col-md-6">
+                    <label class="col-form-label">Ulice a číslo popisné</label>
+                    <input type="text" name="ulice" class="form-control col-form-label" value="<?=$pojistenecInfo[0][7]?>">
+                </div>
+                <div class="col-12 col-md-6">
+                    <label class="col-form-label">Město</label>
+                    <input type="text" name="mesto" class="form-control col-form-label" value="<?=$pojistenecInfo[0][5]?>">
+                </div>
+            </div>
+            <div class="form-group row my-3 d-flex align-items-start justify-content-end">
+                <div class="col-12 col-md-6">
+                    <label class="col-form-label">PSČ</label>
+                    <input type="text" name="psc" class="form-control col-form-label" value="<?=$pojistenecInfo[0][6]?>">
+                </div>
+            </div>
+            <div class="form-row text-center">
+                <div class="col my-2">
+                    <button type="submit" class="btn btn-dark">Uložit</button>
+                </div>
+            </div>
+        </form>
+    </section>

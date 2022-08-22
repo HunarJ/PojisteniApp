@@ -1,0 +1,35 @@
+<section class="container my-5 py-5 px-2">
+      <div class="row py-5">
+        <div class="col">
+          <h3>Pojištěnci</h3>
+        </div>
+      </div>
+      <div class="row text-center my-5">
+        <div class="col">
+          <button type="button" class="btn btn-primary border border-dark" onclick="location.href='pridani'">Nový pojištěnec</button>
+        </div>
+      </div>
+      <div class="row my-5">
+        <div class="col">
+          <table class="table text-center">
+            <thead>
+              <tr class="cell" id="table-pojistenci-hlavicka">
+                <th scope="col">Jméno</th>
+                <th scope="col">Bydliště</th>
+                <th scope="col">Editace</th>
+              </tr>
+            </thead>
+            <tbody>
+              <?php foreach ($pojistenci as $pojistenec) : ?>
+                <tr>
+                  <td><a id="pojistenci-odkazy" href="detail/<?=$pojistenec['pojistenci_id']?>"><?=$pojistenec['jmeno']?> <?=$pojistenec['prijmeni']?></td>
+                  <td><?=$pojistenec['ulice']?> <?=$pojistenec['mesto']?></td>
+                  <td><button type="button" class="btn btn-danger border border-dark mx-2" onclick="location.href='pojistenci/odstranit/<?=$pojistenec['pojistenci_id']?>'">Odstranit</button><button type="button" class="btn btn-warning border border-dark mx-2" onclick="location.href='editacePojistence/<?=$pojistenec['pojistenci_id']?>'">Editovat</button></td>
+                </tr>
+                <?php endforeach ?>
+
+            </tbody>
+          </table>
+        </div>
+      </div> 
+    </section>

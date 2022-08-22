@@ -1,0 +1,74 @@
+<section class="container my-5 py-5 px-2">
+      <div class="row py-5 mx-3">
+        <div class="col-6">
+            <div class="row">
+                <div class="col">
+                    <h3><?=$detail[0]['jmeno']?> <?=$detail[0]['prijmeni']?></h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <p><?=$detail[0]['ulice']?></p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <p><?=$detail[0]['mesto']?></p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <p><?=$detail[0]['psc']?></p>
+                </div>
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="row">
+                <div class="col">
+                    <p><?=$detail[0]['email']?></p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <p><?=$detail[0]['telefon']?></p>
+                </div>
+            </div>  
+          </div>
+      </div>
+      <div class="row mx-3">
+        <div class="col">
+            <h3>Sjednaná pojištění</h3>
+        </div>
+      </div>
+      <div class="row my-5 mx-3">
+        <div class="col">
+          <table class="table text-center">
+            <thead>
+              <tr class="cell" id="table-pojistenci-hlavicka">
+                <th scope="col">Pojištění</th>
+                <th scope="col">Částka</th>
+                <th scope="col">Předmět pojištění</th>
+                <th scope="col">Editace</th>
+              </tr>
+            </thead>
+            <tbody>
+            <?php foreach ($pojisteniPojistenec as $pojisteni) : ?>
+                <tr>
+                  <td><p><?=$pojisteni[0]?></p></td>
+                  <td><p><?=$pojisteni[1]?></p></td>
+                  <td><p><?=$pojisteni[2]?></p></td>
+                  <td><button type="button" class="btn btn-danger border border-dark mx-2" onclick="location.href='detail/<?=$pojisteni[4]?>/odstranit/<?=$pojisteni[3]?>'">Odstranit</button><button type="button" class="btn btn-warning border border-dark mx-2" onclick="location.href='editacePojisteni/<?=$pojisteni[3]?>'">Editovat</button></td>
+                </tr>
+                <?php endforeach ?>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="row my-5 py-5 d-flex align-items-center justify-content-center">
+        <div class="col-6 mx-2 d-flex align-items-center justify-content-between">
+          <button type="button" class="btn btn-primary border border-dark" onclick="location.href='novePojisteni/<?=$detail[0]['pojistenci_id']?>'">Přidat pojištění</button>
+          <button type="button" class="btn btn-warning border border-dark" onclick="location.href='editacePojistence/<?=$detail[0]['pojistenci_id']?>'">Editovat pojištěnce</button>
+          <button type="button" class="btn btn-danger border border-dark" onclick="location.href='detail/<?=$detail[0][0]?>/odstranit'">Odstranit pojištěnce</button>
+        </div>
+      </div> 
+    </section>
